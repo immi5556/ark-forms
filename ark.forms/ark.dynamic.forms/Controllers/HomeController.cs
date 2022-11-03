@@ -20,7 +20,8 @@ namespace ark.dynamic.forms.Controllers
             [FromForm] string email_phone, 
             [FromForm] string profession, 
             [FromForm] string accomponied,
-            [FromForm] string fellowship_src)
+            [FromForm] string fellowship_src,
+            [FromForm] string ip)
         {
             if (string.IsNullOrEmpty(full_name))
             {
@@ -32,7 +33,9 @@ namespace ark.dynamic.forms.Controllers
                 { "email_phone", email_phone },
                 { "profession", profession },
                 { "accomponied", accomponied },
-                { "fellowship_src", fellowship_src }
+                { "fellowship_src", fellowship_src },
+                { "ip", ip },
+                { "at", DateTime.UtcNow.ToString() }
             });
             return RedirectToAction("Thanks");
         }
@@ -43,7 +46,8 @@ namespace ark.dynamic.forms.Controllers
 
         public IActionResult List()
         {
-            ViewBag.Count = new FormCapture("cg_ggg").FetchCount();
+            ViewBag.BookingCount = new FormCapture("cg_ggg").FetchBookingCount();
+            ViewBag.TotalCount = new FormCapture("cg_ggg").FetchTotalCount();
             ViewBag.List = new FormCapture("cg_ggg").FetchData();
             return View();
         }

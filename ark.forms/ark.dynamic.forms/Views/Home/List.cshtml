@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/css/default_thank_you.css">
 	<link rel="stylesheet" href="/css/site.css">
 	<script src="/lib/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ark-js-util@latest/ark-util.js"></script>
 </head>
 <body>
 	<header class="site-header" id="header">
@@ -21,49 +22,47 @@
 
 	<div class="main-content">
 		<p class="main-content__body" data-lead-id="main-content-body">
-			<span>@ViewBag.Count</span> Booked.
+			Total Bookings: <span>@ViewBag.BookingCount</span> <br /><br />
+			Total Count (w/ Accompanying): <span>@ViewBag.TotalCount</span> <br /><br />
 		</p>
 	</div>
 
 	<div>
-
-		<h1>RWD List to Table</h1>
 		<table class="rwd-table">
 			<tr>
-				<th>Movie Title</th>
-				<th>Genre</th>
-				<th>Year</th>
-				<th>Gross</th>
+				<th>Record Id</th>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Profession</th>
+				<th>Fellowship</th>
+				<th>Count</th>
+				<th>Ip</th>
+				<th>At</th>
 			</tr>
+			@foreach(var v in ViewBag.List)
+			{
 			<tr>
-				<td data-th="Movie Title">Star Wars</td>
-				<td data-th="Genre">Adventure, Sci-fi</td>
-				<td data-th="Year">1977</td>
-				<td data-th="Gross">$460,935,665</td>
+				<td data-th="Record Id">@v.record_id</td>
+				<td data-th="Name">@v.full_name</td>
+					<td data-th="Phone">@v.email_phone</td>
+					<td data-th="Profession">@v.profession</td>
+					<td data-th="Fellowship">@v.fellowship_src</td>
+					<td data-th="Count">@v.accomponied</td>
+					<td data-th="Ip">@v.ip</td>
+					<td class="u-at" data-th="At">@v.at</td>
 			</tr>
-			<tr>
-				<td data-th="Movie Title">Howard The Duck</td>
-				<td data-th="Genre">"Comedy"</td>
-				<td data-th="Year">1986</td>
-				<td data-th="Gross">$16,295,774</td>
-			</tr>
-			<tr>
-				<td data-th="Movie Title">American Graffiti</td>
-				<td data-th="Genre">Comedy, Drama</td>
-				<td data-th="Year">1973</td>
-				<td data-th="Gross">$115,000,000</td>
-			</tr>
+			}
 		</table>
-
-		<p>&larr; Drag window (in editor or full page view) to see the effect. &rarr;</p>
 	</div>
 
 	<footer class="site-footer" id="footer">
-		<p class="site-footer__fineprint" id="fineprint">Copyright ©2022 | All Rights Reserved</p>
-
-		<br /><br />
-		@*<a href="javascript:window.open('', '_self', '').close();">Close</a>*@
-		@*<a href="javascript:window.close();">Close</a>*@
 	</footer>
+	<script>
+		(function ($) {
+			$("td.u-at").each((i, t) => {
+				t.innerText = util.dater.toLocalTime(new Date(t.innerText));
+            });
+		})(jQuery);
+	</script>
 </body>
 </html>

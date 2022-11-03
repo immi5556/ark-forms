@@ -42,4 +42,10 @@
     //        $("#btn-submit").prop("disabled", true);
     //});
 
+    $.get("https://api.ipify.org/?format=json", function (response) {
+        //alert(response.ip);
+        window.my_ip = response.ip;
+        $("#ip").val(response.ip);
+    }, "json")
+
 })(jQuery);

@@ -13,10 +13,15 @@
             new Ark.Sqlite.SqliteManager(_con_str).CreateTable(create_table_records());
             return new Ark.Sqlite.SqliteManager(_con_str).Select(select_table_records(null));
         }
-        public dynamic FetchCount()
+        public long FetchBookingCount()
         {
             new Ark.Sqlite.SqliteManager(_con_str).CreateTable(create_table_records());
             return new Ark.Sqlite.SqliteManager(_con_str).ExecuteCount($"select count(*) from records;");
+        }
+        public double FetchTotalCount()
+        {
+            new Ark.Sqlite.SqliteManager(_con_str).CreateTable(create_table_records());
+            return new Ark.Sqlite.SqliteManager(_con_str).ExecuteCount<double>($"select total(accomponied) from records;");
         }
         public dynamic CaptureData(Dictionary<string, string?> props)
         {
