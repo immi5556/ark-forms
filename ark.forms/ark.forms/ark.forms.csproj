@@ -7,6 +7,9 @@
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<OutputType>Library</OutputType>
+		<Title>Ark Forms</Title>
+		<Authors>Immanuel R</Authors>
+		<IsPackable>true</IsPackable>
 	</PropertyGroup>
 
 	<ItemGroup>

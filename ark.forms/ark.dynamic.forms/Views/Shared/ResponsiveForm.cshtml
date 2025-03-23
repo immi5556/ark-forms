@@ -1,0 +1,157 @@
+﻿@model ark.forms.FormModel
+
+<div class="wrap">
+    <div class="header cf">
+        <div class="gov">
+            <h1>Responsive Checkout Concept WIP</h1>
+        </div>
+    </div>
+    <div class="gov">
+        <!--  Checkout Flow    -->
+        <!--<div class="flows">
+          <ul>
+            <li class="co_shipping active">Shipping</li>
+            <li class="co_billing">Billing</li><li class="co_preview">Preview</li>
+            <li class="co_thanks">Thank You</li>
+          </ul>
+          </div>-->
+        <div class="forms cf">
+            <h3 class="sectionHead cf"><span>1</span>Shipping Information <a href="#shippingInfo" class="edit">Edit</a></h3>
+            <ul id="shippingInfo" class="shippingInfo cf">
+                <li>
+                    <label for="first Name" class="active">First Name</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Last Name">Last Name</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Company">Company <span>(optional)</span></label>
+                    <input class="optional" type="text" />
+                </li>
+                <li>
+                    <label for="country">Country</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Address Line 1">Address Line 1</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Address Line 2">Address Line 2</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="City"> City</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="State">State</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Zip Code">Zip Code</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Phone Number">Phone Number<span class="example">XXX-XXX-XXXX</span></label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <input type="submit" value="Continue" class="btn" data-id="billingInfo" />
+                </li>
+            </ul>
+
+            <!-- Billing Info -->
+            <h3 class="sectionHead"><span>2</span>Billing Information <a href="#billingInfo" class="edit">Edit</a></h3>
+            <div class="almost"><p>Please Fill Out Billing Information</p></div>
+            <ul id="billingInfo" class="billingInfo cf">
+                <li>
+                    <label for="first Name" class="active">First Name</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Last Name">Last Name</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Company">Company <span>(optional)</span></label>
+                    <input class="optional" type="text" />
+                </li>
+                <li>
+                    <label for="country">Country</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Address Line 1">Address Line 1</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Address Line 2">Address Line 2</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="City"> City</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="State">State</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Zip Code">Zip Code</label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <label for="Phone Number">Phone Number<span class="example">XXX-XXX-XXXX</span></label>
+                    <input type="text" />
+                </li>
+                <li>
+                    <input type="submit" value="Continue" class="btn finalize" />
+                </li>
+            </ul>
+
+        </div>
+        <div class="receipt">
+            <h2>Receipt</h2>
+            <ul class="cartWrap cf ">
+                <li class="items odd cf">
+
+                    <div class="infoWrap">
+                        <div class="cartSection">
+                            <!-- <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />-->
+
+                            <h3>Item Name 1</h3>
+
+                            <p> 3 x $5.00</p>
+
+                            <p class="stockStatus"> In Stock</p>
+                        </div>
+
+                        <div class="removeWrap">
+                            <a href="#" class="remove">x</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul class="subtotal cf">
+                <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+
+                <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+
+                <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
+                <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+
+            </ul>
+
+
+            <div class="promoCode cf">
+                <label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
+                <a href="#" class="btn">></a>
+            </div>
+        </div>
+    </div>
+</div>
