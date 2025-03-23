@@ -8,3 +8,8 @@ TO DOs:
 
 1. Load Forms by EventId
 2. Dynamic Forms Renderer
+
+-- build new ark.forms
+
+- referred from codepen below
+	-> https://codepen.io/alex_rodrigues/pen/VYearV
