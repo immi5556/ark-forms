@@ -1,0 +1,378 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+    q:before, q:after, blockquote:before, blockquote:after {
+        content: "";
+        content: none;
+    }
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.gov {
+    width: 75%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+body {
+    color: #333;
+    background: #eee;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    letter-spacing: -.015em;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+    .header h1 {
+        font-size: 1em;
+        font-weight: bold;
+        margin: 1.5em 0;
+    }
+
+/* Checlout Flow Steps */
+.flows ul {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+    .flows ul li {
+        font-size: .8em;
+        display: inline-block;
+        padding: .5em 1em;
+        text-align: center;
+    }
+
+        .flows ul li.active {
+            background: #eee;
+        }
+
+/* Checout Form */
+.forms {
+    width: 70%;
+    float: left;
+    background: #fff;
+    box-shadow: 0px 0px 8px -2px #8e8e8e;
+    border-radius: 5px;
+}
+
+    .forms .sectionHead {
+        width: 100%;
+        padding: 1em 1.5em;
+        background: #f2f2f2;
+        border-bottom: 1px solid #D0D0D0;
+        font-weight: bold;
+        font-size: .9em;
+    }
+
+        .forms .sectionHead span {
+            padding: .75em .5em;
+            background: #ff6d00;
+            display: inline-block;
+            color: white;
+            border-radius: 50%;
+            margin: 0 1em 0 0;
+            line-height: 0;
+        }
+
+        .forms .sectionHead a:link, .forms .sectionHead a:visited {
+            font-size: .75em;
+            color: #2979ff;
+            text-transform: capitalize;
+            font-weight: normal;
+            float: right;
+            position: relative;
+            top: 7px;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -ms-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
+        }
+
+        .forms .sectionHead a:hover, .forms .sectionHead a:active, .forms .sectionHead a:focus {
+            color: #00358f;
+        }
+
+    .forms ul {
+        padding: 1em 5%;
+    }
+
+        .forms ul li {
+            float: left;
+            width: 50%;
+            position: relative;
+            padding: 0 5% 0 0;
+            margin: .5em 0;
+        }
+
+        .forms ul label {
+            font-size: .5em;
+            color: #676767;
+            margin-bottom: .25em;
+            display: block;
+        }
+
+            .forms ul label.active {
+                right: 5px;
+                left: auto;
+            }
+
+            .forms ul label span {
+                text-align: right;
+                float: right;
+                color: #676767;
+            }
+
+        .forms ul input[type="text"] {
+            width: 100%;
+            padding: .5em;
+            font-size: .85em;
+            color: #2e2e2e;
+            border: 1px solid #D0D0D0;
+            border-radius: 5px;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -ms-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
+        }
+
+            .forms ul input[type="text"].optional {
+                background: #f4f4f4;
+            }
+
+            .forms ul input[type="text"]:focus {
+                outline: 0;
+                box-shadow: 0px 0px 10px -2px #2979ff;
+            }
+
+        .forms ul input[type="submit"] {
+            appearance: none;
+            -webkit-appearance: none;
+            background: #ff6d00;
+            border: 0;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: .65em;
+            text-align: center;
+            padding: .75em 2.5em;
+            border-radius: 5px;
+            letter-spacing: .025em;
+            /*    font-weight: bold;
+      text-transform: uppercase;*/
+        }
+
+/* Receipt */
+.receipt {
+    float: right;
+    width: 27%;
+    background: #fff;
+    box-shadow: 0px 0px 8px -2px #8e8e8e;
+    border-radius: 5px;
+}
+
+    .receipt h2 {
+        width: 100%;
+        padding: 1em 1.5em;
+        background: #f2f2f2;
+        border-bottom: 1px solid #D0D0D0;
+        font-weight: bold;
+        font-size: .9em;
+    }
+
+    .receipt .cartWrap {
+        padding: 1em 5%;
+    }
+
+    .receipt .promoCode {
+        border-top: 1px solid #D0D0D0;
+        padding: 1em 5%;
+    }
+
+        .receipt .promoCode label {
+            font-size: .75em;
+            color: #676767;
+            display: block;
+            margin-bottom: .5em;
+        }
+
+        .receipt .promoCode input {
+            display: block;
+            float: left;
+            width: 88%;
+            padding: 0.5em 1em;
+            font-size: .85em;
+            color: #676767;
+            border: 1px solid #D0D0D0;
+            border-radius: 5px 0 0 5px;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -ms-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
+            transition: all 0.25s linear;
+        }
+
+            .receipt .promoCode input:focus {
+                outline: 0;
+                box-shadow: 0px 0px 10px -2px #2979ff;
+            }
+
+        .receipt .promoCode a.btn {
+            width: 12%;
+            float: right;
+            padding: 0;
+            line-height: 2.3;
+            margin: 0;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 0 5px 5px 0;
+            background: #ff6d00;
+            font-size: .85em;
+            color: white;
+            text-decoration: none;
+        }
+
+ul#billingInfo {
+    display: none;
+}
+
+/* Mini-Cart */
+.items {
+    border-bottom: 1px solid #D0D0D0;
+    padding: 1em 0;
+}
+
+    .items .cartSection {
+        float: left;
+        width: 85%;
+    }
+
+        .items .cartSection h3 {
+            font-weight: bold;
+            font-size: .85em;
+        }
+
+        .items .cartSection p {
+            font-size: .65em;
+            color: #676767;
+            display: inline-block;
+        }
+
+            .items .cartSection p.stockStatus {
+                color: #7cb342;
+            }
+
+    .items .removeWrap {
+        width: 15%;
+        float: right;
+        text-align: center;
+    }
+
+.subtotal {
+    font-size: .7em;
+    padding: 0 5% 1em;
+}
+
+    .subtotal li {
+        color: #676767;
+        padding: .25em 0;
+    }
+
+        .subtotal li .label {
+            margin-right: 1em;
+            width: 25%;
+            display: inline-block;
+        }
+
+        .subtotal li .value {
+            display: inline-block;
+        }
+
+@media only screen and (max-width: 39.375em) {
+    .gov {
+        width: 98%;
+    }
+
+    .forms, .receipt {
+        width: 100%;
+    }
+
+        .forms ul li, .receipt ul li {
+            width: 100%;
+        }
+
+            .forms ul li input, .receipt ul li input {
+                font-size: 16px;
+            }
+}
